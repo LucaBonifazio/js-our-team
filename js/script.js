@@ -43,17 +43,17 @@ boxCards.classList.add('bg-dark', 'text-white', 'p-5')
 for (let key in arrTeam) {
     const eleCard = document.createElement('div');
     eleCard.classList.add('col-4', 'd-flex', 'g-3', 'flex-column');
-    const eleCardContent = document.createElement('div');
-    eleCardContent.classList.add('img-fluid', 'd-flex', 'flex-column');
+    const eleCardContentImage = document.createElement('div');
+    eleCardContentImage.classList.add('img-fluid', 'd-flex', 'flex-column');
     const eleCardContentName = document.createElement('div');
     eleCardContentName.classList.add('flex-column', 'text-center');
     const eleCardContentWork = document.createElement('div');
     eleCardContentWork.classList.add('flex-column', 'text-center');
     boxCards.append(eleCard);
-    eleCard.append(eleCardContent);
+    eleCard.append(eleCardContentImage);
     eleCard.append(eleCardContentName);
     eleCard.append(eleCardContentWork);
-    eleCardContent.innerHTML = (`<img src="${arrTeam[key].image}">`);
+    eleCardContentImage.innerHTML = (`<img src="${arrTeam[key].image}">`);
     eleCardContentName.innerHTML = (`${arrTeam[key].name} ${arrTeam[key].lastName}`);
     eleCardContentWork.innerHTML = (`${arrTeam[key].occupation}`);
 }
