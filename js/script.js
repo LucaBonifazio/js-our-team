@@ -57,7 +57,13 @@ const arrTeam = [
 const boxCards = document.querySelector('.cards_container');
 
 for (let key in arrTeam) {
-    boxCards.innerHTML = (`${arrTeam[key].image} ${arrTeam[key].name} ${arrTeam[key].lastName} ${arrTeam[key].occupation}`);
+    const eleCard = document.createElement('div');
+    eleCard.classList.add('col-4', 'd-flex', 'img-fluid', 'g-3');
+    const eleCardContent = document.createElement('div');
+    eleCardContent.classList.add('img-fluid', 'd-flex', 'flex-column');
+    boxCards.append(eleCard);
+    eleCard.append(eleCardContent);
+    eleCardContent.innerHTML = (`${arrTeam[key].image} ${arrTeam[key].name} ${arrTeam[key].lastName} ${arrTeam[key].occupation}`);
 }
 
 console.table(arrTeam);
