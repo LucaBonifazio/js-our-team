@@ -41,14 +41,20 @@ const boxCards = document.querySelector('.cards_container');
 
 for (let key in arrTeam) {
     const eleCard = document.createElement('div');
-    eleCard.classList.add('col-4', 'd-flex', 'img-fluid', 'g-3');
+    eleCard.classList.add('col-4', 'd-flex', 'g-3', 'flex-column');
     const eleCardContent = document.createElement('div');
     eleCardContent.classList.add('img-fluid', 'd-flex', 'flex-column');
-    const eleCardContentText = document.createElement('div');
-    eleCardContentText.classList.add('d-flex', 'flex-column');
+    const eleCardContentName = document.createElement('div');
+    eleCardContentName.classList.add('flex-column', 'text-center');
+    const eleCardContentWork = document.createElement('div');
+    eleCardContentWork.classList.add('flex-column', 'text-center');
     boxCards.append(eleCard);
     eleCard.append(eleCardContent);
-    eleCardContent.innerHTML = (`<img src="${arrTeam[key].image}"> ${arrTeam[key].name} ${arrTeam[key].lastName} ${arrTeam[key].occupation}`);
+    eleCard.append(eleCardContentName);
+    eleCard.append(eleCardContentWork);
+    eleCardContent.innerHTML = (`<img src="${arrTeam[key].image}">`);
+    eleCardContentName.innerHTML = (`${arrTeam[key].name} ${arrTeam[key].lastName}`);
+    eleCardContentWork.innerHTML = (`${arrTeam[key].occupation}`);
 }
 
 console.table(arrTeam);
