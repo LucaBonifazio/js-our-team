@@ -17,41 +17,47 @@
 
 const arrTeam = [
     {
-        image: `img/wayne-barnett-founder-ceo.jpg`,
+        image: `<img src="img/wayne-barnett-founder-ceo.jpg" alt="">`,
         name: 'Wayne',
         lastName: 'Barnett',
         occupation: 'Founder & CEO',
     },
     {
-        image: `img/angela-caroll-chief-editor.jpg`,
+        image: `<img src="img/angela-caroll-chief-editor.jpg" alt="">`,
         name: 'Angela',
         lastName: 'Caroll',
         occupation: 'Chief Editor',
     },
     {
-        image: `img/walter-gordon-office-manager.jpg`,
+        image: `<img src="img/walter-gordon-office-manager.jpg" alt="">`,
         name: 'Walter',
         lastName: 'Gordon',
         occupation: 'Office Manager',
     },
     {
-        image: `img/angela-lopez-social-media-manager.jpg`,
+        image: `<img src="img/angela-lopez-social-media-manager.jpg" alt="">`,
         name: 'Angela',
         lastName: 'Lopez',
         occupation: 'Social Media Manager',
     },
     {
-        image: `img/scott-estrada-developer.jpg`,
+        image: `<img src="img/scott-estrada-developer.jpg" alt="">`,
         name: 'Scott',
         lastName: 'Estrada',
         occupation: 'Developer',
     },
     {
-        image: `img/barbara-ramos-graphic-designer.jpg`,
+        image: `<img src="img/barbara-ramos-graphic-designer.jpg" alt="">`,
         name: 'Barbara',
         lastName: 'Ramos',
         occupation: 'Graphic Designer',
     },
 ]
+
+const boxCards = document.querySelector('.cards_container');
+
+for (let key in arrTeam) {
+    boxCards.innerHTML = (`${arrTeam[key].image} ${arrTeam[key].name} ${arrTeam[key].lastName} ${arrTeam[key].occupation}`);
+}
 
 console.table(arrTeam);
