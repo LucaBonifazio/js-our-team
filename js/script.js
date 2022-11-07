@@ -38,6 +38,7 @@ const arrTeam = [
 ]
 
 const boxCards = document.querySelector('.cards_container');
+boxCards.classList.add('bg-dark', 'text-white', 'p-5')
 
 for (let key in arrTeam) {
     const eleCard = document.createElement('div');
