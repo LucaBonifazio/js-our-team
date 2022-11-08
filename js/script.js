@@ -53,9 +53,9 @@ for (let key in arrTeam) {
     eleCard.append(eleCardContentImage);
     eleCard.append(eleCardContentName);
     eleCard.append(eleCardContentWork);
-    eleCardContentImage.innerHTML = (`<img src="${arrTeam[key].image}">`);
-    eleCardContentName.innerHTML = (`${arrTeam[key].name} ${arrTeam[key].lastName}`);
-    eleCardContentWork.innerHTML = (`${arrTeam[key].occupation}`);
+    eleCardContentImage.innerHTML += (`<img src="${arrTeam[key].image}">`);
+    eleCardContentName.innerHTML += (`${arrTeam[key].name} ${arrTeam[key].lastName}`);
+    eleCardContentWork.innerHTML += (`${arrTeam[key].occupation}`);
 }
 
 console.table(arrTeam);
